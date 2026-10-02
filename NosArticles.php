@@ -6,18 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-    $articles=["imprimante","tablette","cables HDMI","stylet"];
-    ?>
-    <ul>
-        <?php
-    foreach ($articles as$value) {
-        ?>
-        <li><?= $value ?></li>
-            <?php
-            }
-        
-    ?>
-    </ul>
+   <?php
+
+$articles = ["imprimante", "tablette", "cables HDMI", "stylet"];
+
+if (isset($articles)) {
+    echo "<h1>Liste des articles</h1>";
+
+    echo "<ul>";
+
+    foreach ($articles as $value) {
+        echo "<li>$value</li>";
+    }
+
+    echo "</ul>";
+}
+else {
+    echo "<h1>Aucun article à afficher</h1>";
+}
+
+?>
 </body>
 </html>
